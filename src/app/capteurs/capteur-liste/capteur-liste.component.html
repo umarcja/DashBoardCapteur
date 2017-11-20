@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-succes" (click)="onCreateNewCapteur()">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">   
+      <app-capteur-item *ngFor="let capteurEl of capteurs" [capteur]="capteurEl" (capteurSelected)="onCapteurSelected(capteurEl)"></app-capteur-item>
+  </div>
+</div>

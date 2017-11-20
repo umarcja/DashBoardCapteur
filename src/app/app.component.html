@@ -1,0 +1,11 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-capteurs *ngIf="loadedFeature === 'capteur'"></app-capteurs>
+      <app-question-liste *ngIf="loadedFeature !== 'capteur'"></app-question-liste>
+    </div>
+  </div>
+</div>
+
